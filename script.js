@@ -1,21 +1,22 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const resultText = document.getElementById("result-text");
+// handle storing of answers in localStorage
+const storage = localStorageHelper();
 
-    if (!resultText) {
-        console.error("Element with id 'result-text' not found.");
-        return;
-    }
-
-    let answers = JSON.parse(localStorage.getItem("quizAnswers"));
-
-    if (answers) {
-        let personalityType = determinePersonality(answers);
-        resultText.textContent = `Your MBTI Personality Type is: ${personalityType}`;
-    } else {
-        resultText.textContent = "No answers found. Please take the test again.";
-    }
+const questions = document.querySelectorAll("input[type=radio]");
+questions.forEach(function (question) {
+    question.addEventListener("change", function () {
+        storage.saveValue(question.name, question.value);
+    });
 });
 
+(function handleSubmit() {
+    const form = document.getElementById("mbti-test");
+    if (form) {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            window.location.href = "results.html";
+        })
+    }
+})();
 
 // Function to determine MBTI personality type based on answers
 function determinePersonality(answers) {
@@ -52,7 +53,7 @@ function determinePersonality(answers) {
 function showExplanation(personalityType) {
     // Hide all explanations
     const allExplanations = document.querySelectorAll(".explanation");
-    allExplanations.forEach(function(explanation) {
+    allExplanations.forEach(function (explanation) {
         explanation.style.display = "none";
     });
 
@@ -65,7 +66,7 @@ function showExplanation(personalityType) {
 
 // Function to restart the test
 function restartTest() {
-    localStorage.removeItem("quizAnswers");
+    storage.clearStorage();
     window.location.href = "test.html";
 }
 
