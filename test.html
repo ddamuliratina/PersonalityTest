@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MBTI Personality Test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>MBTI Personality Test</h1>
+    <form id="mbti-test" action="results.html" method="GET">
+
+        <!-- Extraversion vs Introversion -->
+        <fieldset>
+            <legend>Extraversion (E) vs. Introversion (I)</legend>
+            <p>1. Do you prefer to spend time in large groups or in smaller, more intimate settings?</p>
+            <label>
+                <input type="radio" name="question1" value="E"> Large groups
+            </label><br>
+            <label>
+                <input type="radio" name="question1" value="I"> Small groups or alone
+            </label><br>
+
+            <p>2. After a busy week, do you feel energized by socializing or prefer to recharge alone?</p>
+            <label>
+                <input type="radio" name="question2" value="E"> Energized by socializing
+            </label><br>
+            <label>
+                <input type="radio" name="question2" value="I"> Prefer to recharge alone
+            </label><br>
+        </fieldset>
+
+        <!-- Sensing vs Intuition -->
+        <fieldset>
+            <legend>Sensing (S) vs. Intuition (N)</legend>
+            <p>3. Do you tend to focus on the details or the big picture?</p>
+            <label>
+                <input type="radio" name="question3" value="S"> Details
+            </label><br>
+            <label>
+                <input type="radio" name="question3" value="N"> Big picture
+            </label><br>
+
+            <p>4. Do you prefer to stick to tried-and-true methods, or do you enjoy exploring new ideas?</p>
+            <label>
+                <input type="radio" name="question4" value="S"> Stick to what works
+            </label><br>
+            <label>
+                <input type="radio" name="question4" value="N"> Explore new ideas
+            </label><br>
+        </fieldset>
+
+        <!-- Thinking vs Feeling -->
+        <fieldset>
+            <legend>Thinking (T) vs. Feeling (F)</legend>
+            <p>5. When making decisions, do you primarily rely on logic or your feelings?</p>
+            <label>
+                <input type="radio" name="question5" value="T"> Logic
+            </label><br>
+            <label>
+                <input type="radio" name="question5" value="F"> Feelings
+            </label><br>
+
+            <p>6. In arguments, do you focus more on the facts or the emotional impact of your words?</p>
+            <label>
+                <input type="radio" name="question6" value="T"> Focus on facts
+            </label><br>
+            <label>
+                <input type="radio" name="question6" value="F"> Focus on emotions
+            </label><br>
+        </fieldset>
+
+        <!-- Judging vs Perceiving -->
+        <fieldset>
+            <legend>Judging (J) vs. Perceiving (P)</legend>
+            <p>7. Do you prefer having a set plan or leaving things open-ended?</p>
+            <label>
+                <input type="radio" name="question7" value="J"> Set plan
+            </label><br>
+            <label>
+                <input type="radio" name="question7" value="P"> Open-ended
+            </label><br>
+
+            <p>8. When it comes to deadlines, do you prefer to complete tasks ahead of time or at the last minute?</p>
+            <label>
+                <input type="radio" name="question8" value="J"> Ahead of time
+            </label><br>
+            <label>
+                <input type="radio" name="question8" value="P"> Last minute
+            </label><br>
+        </fieldset>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>

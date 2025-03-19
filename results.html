@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personality Test Results</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Your Personality Test Results</h1>
+
+      <p id="result-text">Analyzing your answers...</p>
+
+      <!-- Static explanations for each personality type (hidden by default) -->
+      <div id="ESTJ" class="explanation" style="display: none">
+        <h3>ESTJ: The Executive</h3>
+        <p>
+          You are practical, organized, and enjoy leadership roles. You thrive
+          in environments that require decision-making and are known for being
+          highly reliable.
+        </p>
+      </div>
+      <div id="ISTJ" class="explanation" style="display: none">
+        <h3>ISTJ: The Logistician</h3>
+        <p>
+          You are detail-oriented, responsible, and enjoy structure. You value
+          tradition and work methodically to achieve your goals.
+        </p>
+      </div>
+      <div id="ESFJ" class="explanation" style="display: none">
+        <h3>ESFJ: The Consul</h3>
+        <p>
+          You are sociable, empathetic, and enjoy helping others. You excel in
+          teamwork and value relationships and harmony.
+        </p>
+      </div>
+      <div id="ISFJ" class="explanation" style="display: none">
+        <h3>ISFJ: The Defender</h3>
+        <p>
+          You are compassionate, loyal, and protective. You take pride in
+          helping others and are committed to maintaining stability and
+          security.
+        </p>
+      </div>
+      <!-- Add more personality types here as needed -->
+
+      <button onclick="restartTest()">Retake the Test</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
